@@ -1,9 +1,12 @@
 [build]
 builder = "nixpacks"
-buildCommand = "cd client && npm install && npm run build"
+buildCommand = "npm install && cd client && npm install && npm run build"
 startCommand = "cd client && npm start"
 
 [build.environment]
 NODE_VERSION = "18"
 NPM_CONFIG_PRODUCTION = "false"
 NODE_ENV = "production"
+
+[deploy]
+startCommand = "cd client && npm start"
