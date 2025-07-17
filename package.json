@@ -11,7 +11,7 @@
     "install-client": "cd client && npm install",
     "build": "cd client && npm install && npm run build",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run install-client && npm run build",
-    "postinstall": "cd client && npm install",
+    "postinstall": "echo 'Skipping client install to prevent loop'",
     "db:create": "npx sequelize-cli db:create",
     "db:migrate": "npx sequelize-cli db:migrate",
     "db:migrate:undo": "npx sequelize-cli db:migrate:undo",

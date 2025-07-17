@@ -1,7 +1,8 @@
 {
   "build": {
     "builder": "NIXPACKS",
-    "buildCommand": "cd client && npm install && npm run build"
+    "buildCommand": "cd client && npm install && npm run build",
+    "buildImage": "node:20"
   },
   "deploy": {
     "restartPolicyType": "ON_FAILURE"
