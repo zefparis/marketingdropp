@@ -1,13 +1,8 @@
+# Configuration minimale pour Railway
 [build]
-builder = "npx @railway/app-interface@latest"
+builder = "NIXPACKS"
 buildCommand = "cd client && npm install && npm run build"
-startCommand = "cd client && npm start"
 
 [build.environment]
-NODE_VERSION = "18.x"
+NODE_VERSION = "18"
 NPM_CONFIG_PRODUCTION = "false"
-NPM_CONFIG_LEGACY_PEER_DEPS = "true"
-NODE_ENV = "production"
-
-[deploy]
-startCommand = "cd client && npm start"
